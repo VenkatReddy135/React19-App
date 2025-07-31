@@ -12,7 +12,7 @@ const CrudManager = () => {
   const [editId, setEditId] = useState(null);
   const [editForm, setEditForm] = useState({ title: "", body: "" });
   const [deleteId, setDeleteId] = useState(null);
-
+  
   // Add Post
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,7 +40,7 @@ const CrudManager = () => {
   // Edit Post
   const handleUpdate = async () => {
     try {
-      const res = await fetch(`https://dummyjson.com/posts/${editId}`, {
+      const res = await fetch(`https://dummyjson.com/posts/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...editForm, userId }), // ✅ userId included
@@ -62,7 +62,7 @@ const CrudManager = () => {
   // Delete Post
   const handleDeleteConfirm = async () => {
     try {
-      const res = await fetch(`https://dummyjson.com/posts/${deleteId}`, {
+      const res = await fetch(`https://dummyjson.com/posts/${userId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId }), // ✅ userId included
