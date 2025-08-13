@@ -35,7 +35,7 @@ const PostDetails = () => {
     );
   }
 
-  if (!post) return <div className="text-danger">Post not found</div>;
+  if (!post) return <div className="text-primary">Loading...</div>;
 
   return (
     <div className="container text-white">
