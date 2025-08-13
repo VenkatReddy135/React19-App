@@ -14,7 +14,6 @@ const Crud = () => {
     <PostProvider>
       <div className="container">
         <Breadcrumb />
-        <h2 className="mb-4">Post CRUD Management</h2>
         {role === "admin" && (
           <div className="card mb-4 shadow-sm">
             <div className="card-body">

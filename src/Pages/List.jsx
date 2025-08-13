@@ -21,7 +21,6 @@ const List = () => {
   return (
     <div className="container">
       <Breadcrumb />
-      <h2 className="mb-4">Post List</h2>
 
       {loading ? (
         <div className="text-center">
