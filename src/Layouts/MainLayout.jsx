@@ -16,7 +16,7 @@ const MainLayout = () => {
     <div className="container-fluid">
       <div className="row">
         {/* Sidebar */}
-        <div className="col-md-3 bg-light min-vh-0 p-3 border-end">
+        <div className="col-md-3 bg-light min-vh-100 p-3 border-end">
           <h4>Welcome!</h4>
           <p>{user?.email}</p>
           <Sidebar />
