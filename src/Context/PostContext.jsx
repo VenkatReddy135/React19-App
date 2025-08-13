@@ -5,7 +5,8 @@ const PostContext = createContext();
 
 export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([
-    { id: uuidv4(), title: "Hello", body: "First post" },
+    { id: uuidv4(), title: "FP", body: "First post" },
+    { id: uuidv4(), title: "SP", body: "Second post" },
   ]);
   const addPost = (p) => setPosts((prev) => [...prev, { ...p, id: uuidv4() }]);
   const updatePost = (id, p) =>
